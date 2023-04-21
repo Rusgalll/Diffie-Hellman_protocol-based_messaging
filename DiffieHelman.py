@@ -8,7 +8,8 @@ class DiffieHelm:
         self.g = None
         self.p = None
         self.residue_division = None
-        self.__key = None
+        self.key = None
+        self.stranger_division = None
 
     def _generate_a(self, number: int) -> None:
         self.a = random.getrandbits(number)
@@ -103,12 +104,16 @@ class DiffieHelm:
     def _generate_residue_division(self):
         self.residue_division = pow(self.g, self.a, self.p)
 
-    def generate_parameters(self) -> None:
+    def generate_key(self) -> None:
+        self.key = pow(self.stranger_division, self.a, self.p)
+
+    def generate_parameters_client(self) -> None:
         self._generate_a(50)
-        print(self.a)
         self._generate_p(50)
-        print(self.p)
         self._generate_g()
-        print(self.g)
         self._generate_residue_division()
-        print(self.residue_division)
+
+    def generate_parameters_server(self) -> None:
+        self._generate_a(50)
+        self._generate_residue_division()
+        self.generate_key()
