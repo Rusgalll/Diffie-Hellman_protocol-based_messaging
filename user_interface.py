@@ -8,6 +8,14 @@ from DiffieHelman import DiffieHelm
 
 
 class User:
+    with open('configs/connect-config.json', 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    HOST = data["host"]
+    PORT = data["port"]
+    BUFSIZ = data["bifsiz"]
+    ADDR = (HOST, PORT)
+
     def __init__(self, title=None):
         self.root = Tk()
         self.root.geometry("700x700")
@@ -50,13 +58,6 @@ class User:
 
 
 class Client(User):
-    with open('configs/connect-config.json', 'r', encoding='utf-8') as f:
-        data = json.load(f)
-
-    HOST = data["host"]
-    PORT = data["port"]
-    BUFSIZ = data["bifsiz"]
-    ADDR = (HOST, PORT)
 
     def __init__(self, title=None):
         super().__init__(title)
@@ -103,13 +104,6 @@ class Client(User):
 
 
 class Server(User):
-    with open('configs/connect-config.json', 'r', encoding='utf-8') as f:
-        data = json.load(f)
-
-    HOST = data["host"]
-    PORT = data["port"]
-    BUFSIZ = data["bifsiz"]
-    ADDR = (HOST, PORT)
 
     def __init__(self, title=None):
         super().__init__(title)
