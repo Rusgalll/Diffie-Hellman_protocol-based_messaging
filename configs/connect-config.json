@@ -1,0 +1,5 @@
+{
+  "host": "localhost",
+  "port": 33000,
+  "bifsiz": 1024
+}
