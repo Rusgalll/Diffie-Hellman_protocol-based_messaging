@@ -25,10 +25,9 @@
 - В качестве графической библиотеки используется Tkinter
 
 - У сервера присутствует графическая оболочка, которая позволяет отследить входящие и сгенерированные на его стороне данные.
-
-- Удостоверение, что ключи на сервере и клиенте одинаковые
-
-<img src="https://user-images.githubusercontent.com/88139430/233657580-f02171ee-44a8-40f4-9139-db930eede8e9.png" alt="drawing" width="900"/>
+<img src="https://user-images.githubusercontent.com/88139430/234613476-9ea1bd8e-c3e1-4b21-bc51-1edbdc495da7.png" alt="drawing" width="400"/>
 
 
+- Клиент имеет схожий интерфейс, что и клиент
 
+<img src="https://user-images.githubusercontent.com/88139430/234613877-c129a548-bd1e-40b7-8ed3-98c16600ad0d.png" alt="drawing" width="500"/>
